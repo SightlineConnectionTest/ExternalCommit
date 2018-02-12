@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+ <fullName>alm_pm2__VC_Repository_Validation__c</fullName>
+ <actionOverrides>
+  <actionName>Accept</actionName>
+  <type>Default</type>
+ </actionOverrides>
+ <actionOverrides>
+  <actionName>CancelEdit</actionName>
+  <type>Default</type>
+ </actionOverrides>
+ <actionOverrides>
+  <actionName>Clone</actionName>
+  <type>Default</type>
+ </actionOverrides>
+ <actionOverrides>
+  <actionName>Delete</actionName>
+  <type>Default</type>
+ </actionOverrides>
+ <actionOverrides>
+  <actionName>Edit</actionName>
+  <type>Default</type>
+ </actionOverrides>
+ <actionOverrides>
+  <actionName>List</actionName>
+  <type>Default</type>
+ </actionOverrides>
+ <actionOverrides>
+  <actionName>New</actionName>
+  <type>Default</type>
+ </actionOverrides>
+ <actionOverrides>
+  <actionName>SaveEdit</actionName>
+  <type>Default</type>
+ </actionOverrides>
+ <actionOverrides>
+  <actionName>Tab</actionName>
+  <type>Default</type>
+ </actionOverrides>
+ <actionOverrides>
+  <actionName>View</actionName>
+  <type>Default</type>
+ </actionOverrides>
+ <allowInChatterGroups>false</allowInChatterGroups>
+ <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+ <deploymentStatus>Deployed</deploymentStatus>
+ <deprecated>false</deprecated>
+ <enableActivities>false</enableActivities>
+ <enableBulkApi>true</enableBulkApi>
+ <enableChangeDataCapture>false</enableChangeDataCapture>
+ <enableFeeds>false</enableFeeds>
+ <enableHistory>true</enableHistory>
+ <enableReports>true</enableReports>
+ <enableSearch>false</enableSearch>
+ <enableSharing>true</enableSharing>
+ <enableStreamingApi>true</enableStreamingApi>
+ <fields>
+  <fullName>alm_pm2__ExternalID__c</fullName>
+  <caseSensitive>false</caseSensitive>
+  <deprecated>false</deprecated>
+  <description>External Id used to match this record uniquely</description>
+  <externalId>true</externalId>
+  <inlineHelpText>External Id used to match this record uniquely</inlineHelpText>
+  <label>ExternalID</label>
+  <length>100</length>
+  <required>false</required>
+  <trackHistory>false</trackHistory>
+  <trackTrending>false</trackTrending>
+  <type>Text</type>
+  <unique>true</unique>
+ </fields>
+ <fields>
+  <fullName>alm_pm2__SuccessfulValidation__c</fullName>
+  <defaultValue>false</defaultValue>
+  <deprecated>false</deprecated>
+  <description>Represents the success status of this validation attempt</description>
+  <externalId>false</externalId>
+  <inlineHelpText>Represents the success status of this validation attempt</inlineHelpText>
+  <label>Successful Validation</label>
+  <trackHistory>false</trackHistory>
+  <trackTrending>false</trackTrending>
+  <type>Checkbox</type>
+ </fields>
+ <fields>
+  <fullName>alm_pm2__VC_Repository__c</fullName>
+  <deprecated>false</deprecated>
+  <description>The repository for which this validation was attempted</description>
+  <externalId>false</externalId>
+  <inlineHelpText>The repository for which this validation was attempted</inlineHelpText>
+  <label>VC Repository</label>
+  <referenceTo>alm_pm2__VC_Repository__c</referenceTo>
+  <relationshipLabel>VC Repository Validations</relationshipLabel>
+  <relationshipName>VC_Repository_Validations</relationshipName>
+  <relationshipOrder>0</relationshipOrder>
+  <reparentableMasterDetail>false</reparentableMasterDetail>
+  <trackHistory>false</trackHistory>
+  <trackTrending>false</trackTrending>
+  <type>MasterDetail</type>
+  <writeRequiresMasterRead>false</writeRequiresMasterRead>
+ </fields>
+ <fields>
+  <fullName>alm_pm2__ValidationDate__c</fullName>
+  <deprecated>false</deprecated>
+  <description>Date / Time when the validation occurred</description>
+  <externalId>false</externalId>
+  <inlineHelpText>Date / Time when the validation occurred</inlineHelpText>
+  <label>Validation Date</label>
+  <required>false</required>
+  <trackHistory>false</trackHistory>
+  <trackTrending>false</trackTrending>
+  <type>DateTime</type>
+ </fields>
+ <fields>
+  <fullName>alm_pm2__ValidationError__c</fullName>
+  <deprecated>false</deprecated>
+  <description>Errors that occurred when attempting the validation</description>
+  <externalId>false</externalId>
+  <inlineHelpText>Errors that occurred when attempting the validation</inlineHelpText>
+  <label>Validation Error</label>
+  <length>32768</length>
+  <trackHistory>false</trackHistory>
+  <trackTrending>false</trackTrending>
+  <type>LongTextArea</type>
+  <visibleLines>3</visibleLines>
+ </fields>
+ <label>VC Repository Validation</label>
+ <nameField>
+  <displayFormat>VCRV-{0000}</displayFormat>
+  <label>VC Repository Validation Name</label>
+  <trackHistory>false</trackHistory>
+  <type>AutoNumber</type>
+ </nameField>
+ <pluralLabel>VC Repository Validations</pluralLabel>
+ <searchLayouts/>
+ <sharingModel>ControlledByParent</sharingModel>
+ <visibility>Public</visibility>
+</CustomObject>

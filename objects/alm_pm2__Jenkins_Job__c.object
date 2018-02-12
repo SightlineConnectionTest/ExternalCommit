@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+ <fullName>alm_pm2__Jenkins_Job__c</fullName>
+ <actionOverrides>
+  <actionName>Accept</actionName>
+  <type>Default</type>
+ </actionOverrides>
+ <actionOverrides>
+  <actionName>CancelEdit</actionName>
+  <type>Default</type>
+ </actionOverrides>
+ <actionOverrides>
+  <actionName>Clone</actionName>
+  <type>Default</type>
+ </actionOverrides>
+ <actionOverrides>
+  <actionName>Delete</actionName>
+  <type>Default</type>
+ </actionOverrides>
+ <actionOverrides>
+  <actionName>Edit</actionName>
+  <type>Default</type>
+ </actionOverrides>
+ <actionOverrides>
+  <actionName>List</actionName>
+  <type>Default</type>
+ </actionOverrides>
+ <actionOverrides>
+  <actionName>New</actionName>
+  <type>Default</type>
+ </actionOverrides>
+ <actionOverrides>
+  <actionName>SaveEdit</actionName>
+  <type>Default</type>
+ </actionOverrides>
+ <actionOverrides>
+  <actionName>Tab</actionName>
+  <type>Default</type>
+ </actionOverrides>
+ <actionOverrides>
+  <actionName>View</actionName>
+  <type>Default</type>
+ </actionOverrides>
+ <allowInChatterGroups>false</allowInChatterGroups>
+ <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+ <deploymentStatus>Deployed</deploymentStatus>
+ <deprecated>false</deprecated>
+ <description>Represents a job on a Jenkins CI build server.</description>
+ <enableActivities>false</enableActivities>
+ <enableBulkApi>true</enableBulkApi>
+ <enableChangeDataCapture>false</enableChangeDataCapture>
+ <enableFeeds>false</enableFeeds>
+ <enableHistory>false</enableHistory>
+ <enableReports>false</enableReports>
+ <enableSearch>false</enableSearch>
+ <enableSharing>true</enableSharing>
+ <enableStreamingApi>true</enableStreamingApi>
+ <fields>
+  <fullName>alm_pm2__Build_Rule__c</fullName>
+  <deleteConstraint>SetNull</deleteConstraint>
+  <deprecated>false</deprecated>
+  <externalId>false</externalId>
+  <label>Build Rule</label>
+  <referenceTo>alm_pm2__Build_Rule__c</referenceTo>
+  <relationshipLabel>Jenkins Jobs</relationshipLabel>
+  <relationshipName>Jenkins_Jobs</relationshipName>
+  <required>false</required>
+  <trackTrending>false</trackTrending>
+  <type>Lookup</type>
+ </fields>
+ <fields>
+  <fullName>alm_pm2__CI_Instance__c</fullName>
+  <deleteConstraint>Restrict</deleteConstraint>
+  <deprecated>false</deprecated>
+  <externalId>false</externalId>
+  <inlineHelpText>The target instance for this Job</inlineHelpText>
+  <label>CI Instance</label>
+  <referenceTo>alm_pm2__CI_Instance__c</referenceTo>
+  <relationshipLabel>Jenkins Jobs</relationshipLabel>
+  <relationshipName>Jenkins_Jobs</relationshipName>
+  <required>true</required>
+  <trackTrending>false</trackTrending>
+  <type>Lookup</type>
+ </fields>
+ <fields>
+  <fullName>alm_pm2__Dependent_Jenkins_Job__c</fullName>
+  <deleteConstraint>SetNull</deleteConstraint>
+  <deprecated>false</deprecated>
+  <description>A job dependent on this job.</description>
+  <externalId>false</externalId>
+  <label>Dependent Jenkins Job</label>
+  <referenceTo>alm_pm2__Jenkins_Job__c</referenceTo>
+  <relationshipLabel>Dependent Jenkins Jobs</relationshipLabel>
+  <relationshipName>Dependent_Jenkins_Jobs</relationshipName>
+  <required>false</required>
+  <trackTrending>false</trackTrending>
+  <type>Lookup</type>
+ </fields>
+ <fields>
+  <fullName>alm_pm2__Is_Validation__c</fullName>
+  <defaultValue>false</defaultValue>
+  <deprecated>false</deprecated>
+  <externalId>false</externalId>
+  <inlineHelpText>Indicates if this job is performing a validation. When unchecked it indicates this is for a deployment</inlineHelpText>
+  <label>Is Validation?</label>
+  <trackTrending>false</trackTrending>
+  <type>Checkbox</type>
+ </fields>
+ <fields>
+  <fullName>alm_pm2__Last_Build_Status__c</fullName>
+  <deprecated>false</deprecated>
+  <externalId>false</externalId>
+  <label>Last_Build_Status</label>
+  <length>30</length>
+  <required>false</required>
+  <trackTrending>false</trackTrending>
+  <type>Text</type>
+  <unique>false</unique>
+ </fields>
+ <fields>
+  <fullName>alm_pm2__Path__c</fullName>
+  <deprecated>false</deprecated>
+  <description>Represents a relative URL path to a job on a Jenkins CI build server.</description>
+  <externalId>false</externalId>
+  <label>Path</label>
+  <length>255</length>
+  <required>true</required>
+  <trackTrending>false</trackTrending>
+  <type>Text</type>
+  <unique>false</unique>
+ </fields>
+ <fields>
+  <fullName>alm_pm2__Release__c</fullName>
+  <deleteConstraint>SetNull</deleteConstraint>
+  <deprecated>false</deprecated>
+  <description>Represents a Sightline release.</description>
+  <externalId>false</externalId>
+  <label>Release</label>
+  <referenceTo>alm_pm2__Release__c</referenceTo>
+  <relationshipLabel>Jenkins Jobs</relationshipLabel>
+  <relationshipName>Jenkins_Jobs</relationshipName>
+  <required>false</required>
+  <trackTrending>false</trackTrending>
+  <type>Lookup</type>
+ </fields>
+ <fields>
+  <fullName>alm_pm2__Token__c</fullName>
+  <deprecated>false</deprecated>
+  <description>Represents an authentication token for a job on a Jenkins CI build server.</description>
+  <externalId>false</externalId>
+  <label>Token</label>
+  <length>255</length>
+  <required>false</required>
+  <trackTrending>false</trackTrending>
+  <type>Text</type>
+  <unique>false</unique>
+ </fields>
+ <fields>
+  <fullName>alm_pm2__Trigger_Job_Automatically__c</fullName>
+  <defaultValue>false</defaultValue>
+  <deprecated>false</deprecated>
+  <description>Trigger_Job_Automatically__c checkbox to be checked if the jenkins jobs should start automatically start the jenkins job.</description>
+  <externalId>false</externalId>
+  <label>Trigger_Job_Automatically</label>
+  <trackTrending>false</trackTrending>
+  <type>Checkbox</type>
+ </fields>
+ <label>Jenkins Job</label>
+ <nameField>
+  <label>Jenkins Job Name</label>
+  <type>Text</type>
+ </nameField>
+ <pluralLabel>Jenkins Jobs</pluralLabel>
+ <searchLayouts/>
+ <sharingModel>ReadWrite</sharingModel>
+ <visibility>Public</visibility>
+ <webLinks>
+  <fullName>alm_pm2__Configure_Build_Rule</fullName>
+  <availability>online</availability>
+  <displayType>button</displayType>
+  <height>600</height>
+  <linkType>page</linkType>
+  <masterLabel>Configure Build Rule</masterLabel>
+  <openType>noSidebar</openType>
+  <page>alm_pm2__BuildRuleConfig</page>
+  <protected>false</protected>
+ </webLinks>
+ <webLinks>
+  <fullName>alm_pm2__Jenkins_Job</fullName>
+  <availability>online</availability>
+  <displayType>button</displayType>
+  <height>600</height>
+  <linkType>page</linkType>
+  <masterLabel>Start Job</masterLabel>
+  <openType>noSidebar</openType>
+  <page>alm_pm2__JenkinsJob</page>
+  <protected>false</protected>
+ </webLinks>
+</CustomObject>
